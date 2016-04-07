@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Gallery</title>
+<style type="text/css">
+body{
+	background-color: #669ac0;
+	font-family: verdana;
+}
+
+h1{
+	color: white;
+	text-align: center;
+}
+
+div#viewer{
+	border: 2px solid white;
+	margin:auto;
+	margin-bottom: 5%;
+	height: 300px;
+	width: 500px;
+	background-color: white;
+	padding:5px;
+	overflow: auto;
+}
+
+p{
+	color:black;
+	text-align: center;
+}
+
+figcaption{
+	color:white;
+}
+#body #pix figure{
+	position:relative;
+	display:inline-block;
+	text-align: center;
+	margin-left:1%;
+}
+
+</style>
+<div class=view>
+<script type="text/javascript">
+			function image1(){
+				var img = document.createElement("img")
+				img.setAttribute("src", "img/boat.jpg")
+				img.setAttribute("width","500")
+				var alt = document.getElementById("img1").getAttribute('alt');
+				document.getElementById("viewer").innerHTML = alt;
+				document.getElementById("viewer").appendChild(img);
+			}
+			function image2(){
+				var img = document.createElement("img")
+				img.setAttribute("src", "img/cliff.jpg")
+				img.setAttribute("width","500")
+				var alt = document.getElementById("img2").getAttribute('alt');
+				document.getElementById("viewer").innerHTML = alt;
+				document.getElementById("viewer").appendChild(img);
+			}
+			function image3(){
+				var img = document.createElement("img")
+				img.setAttribute("src", "img/wut.png")
+				img.setAttribute("width","500")
+				var alt = document.getElementById("img3").getAttribute('alt');
+				document.getElementById("viewer").innerHTML = alt;
+				document.getElementById("viewer").appendChild(img);
+			}
+			function image4(){
+				var img = document.createElement("img")
+				img.setAttribute("src", "img/dali.jpg")
+				img.setAttribute("width","500")
+				var alt = document.getElementById("img4").getAttribute('alt');
+				document.getElementById("viewer").innerHTML = alt;
+				document.getElementById("viewer").appendChild(img);
+			}
+			function image5(){
+				var img = document.createElement("img")
+				img.setAttribute("src", "img/pink.png")
+				img.setAttribute("width","500")
+				var alt = document.getElementById("img5").getAttribute('alt');
+				document.getElementById("viewer").innerHTML = alt;
+				document.getElementById("viewer").appendChild(img);
+			}
+			function image6(){
+				var img = document.createElement("img")
+				img.setAttribute("src", "img/mountains.png")
+				img.setAttribute("width","500")
+				var alt = document.getElementById("img6").getAttribute('alt');
+				document.getElementById("viewer").innerHTML = alt;
+				document.getElementById("viewer").appendChild(img);
+
+			}
+			function exitfunction(){
+				document.getElementById("viewer").innerHTML = "Please hover over an image below.";
+			}
+</script>
+</div>
+
+</head>
+<body id="body" >
+	<header><h1><script type="text/javascript">
+			var today = new Date();
+			var curHr = today.getHours();
+			if(curHr<12){
+				document.write("Good Morning")
+			}else if(curHr<18){
+				document.write("Good Afternoon")
+			}else{
+				document.write("Good Evening")
+			}
+		</script></h1></header>
+	<div class="display">
+	<div id="viewer">
+		<p>Please hover over an image below.</p>
+		
+	</div>
+	<div id="pix">
+		<figure>
+			<img onmouseover="image1()" onMouseOut="exitfunction()" id="img1" src="img/boat.jpg" class="thumbnail" width=150 height=110 alt="Lance and me on a boat">
+			<figcaption>1</figcaption>
+		</figure>
+		<figure>
+			<img onmouseover="image2()" onMouseOut="exitfunction()" id="img2" src="img/cliff.jpg" class="thumbnail" width=150 height=100 alt="Lance and me hiking">
+			<figcaption>2</figcaption>
+		</figure>
+		<figure>
+			<img onmouseover="image3()" onMouseOut="exitfunction()" id="img3" src="img/wut.png" class="thumbnail2" width=150 height=100 alt="Lance and me at the Alhambra">
+			<figcaption>3</figcaption>
+		</figure>
+		<figure>
+			<img onmouseover="image4()" onMouseOut="exitfunction()" id="img4" src="img/dali.jpg" class="thumbnail" width=150 height=100 alt="Lance and me outside the Dali museum">
+			<figcaption>4</figcaption>
+		</figure>
+		<figure>
+			<img onmouseover="image5()" onMouseOut="exitfunction()" id="img5" src="img/pink.png" class="thumbnail2" width=150 height=100 alt="Lance and me at a tailgate">
+			<figcaption>5</figcaption>
+		</figure>
+		<figure>
+			<img onmouseover="image6()" onMouseOut="exitfunction()" id="img6" src="img/mountains.png" class="thumbnail" width=150 height=90 alt="Lance and me at the Mer de Glace">
+			<figcaption>6</figcaption>
+		</figure>
+	</div>
+	</div>
+</body>
